@@ -12,7 +12,7 @@ const projects = [
     id: 2,
     title: 'Project 1',
     description: 'Project 2 description',
-    image: '/img/project-1.png',
+    image: '/img/project-2.png',
     url: 'https://country-app-umber.vercel.app/'
   },
   {
