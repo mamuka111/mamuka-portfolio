@@ -47,7 +47,7 @@ const Contact = () => {
   }
 
   return (
-    <section className='w-full py-6 md:py-12 lg:py-20 border-t'>
+    <section id='contact' className='w-full py-6 md:py-12 lg:py-20 border-t'>
       <div className='container grid items-center gap-4 px-4 md:px-4'>
         <div className='space-y-4'>
           <div className='inline-block rounded-lg bg-primary px-3 py-1 text-sm text-white'>
