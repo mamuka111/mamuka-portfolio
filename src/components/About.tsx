@@ -22,10 +22,9 @@ const About = () => {
               My skills
             </h2>
             <p className='max-w-[600px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400'>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde
-              amet, assumenda quis sit eaque pariatur odit, eligendi atque
-              mollitia ut minus deleniti reprehenderit id voluptate, aspernatur
-              explicabo blanditiis culpa dignissimos.
+Proficient in front-end development, I specialize in crafting dynamic interfaces using JavaScript and TypeScript,
+ with expertise in React.js and Next.js. I prioritize functionality and aesthetics, leveraging Bootstrap, Sass, and Redux for scalability and efficient state management.
+  Experienced in Git for collaborative and organized development workflows.
             </p>
           </div>
           <div className='flex gap-5 flex-wrap '>
