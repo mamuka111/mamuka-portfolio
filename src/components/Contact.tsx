@@ -1,5 +1,6 @@
 'use client'
-
+import React, { useState, useEffect } from 'react';
+import { motion } from 'framer-motion';
 import * as z from 'zod'
 import { contactSchema } from '@/schemas/contact-schema'
 import { useForm } from 'react-hook-form'
@@ -20,6 +21,22 @@ import { toast } from 'sonner'
 import { sendContactEmail } from '@/server/send-contact-email'
 
 const Contact = () => {
+
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const section = document.getElementById('contact');
+      if (section) {
+        const { top } = section.getBoundingClientRect();
+        const isVisible = top >= 0 && top <= window.innerHeight;
+        setIsVisible(isVisible);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  } , [])
   const [isPending, startTransition] = useTransition()
 
   const form = useForm<z.infer<typeof contactSchema>>({
@@ -55,10 +72,23 @@ const Contact = () => {
             Projects
           </div>
           <div className='space-y-10'>
+          <motion.div initial="hidden" animate={isVisible ? "visible" : "hidden"} variants={{
+              hidden: {
+                scale: .8,
+                opacity: 0
+              },
+              visible: {
+                scale: 1,
+                opacity: 1,
+                transition: {
+                  delay: .2
+                }
+              },
+            }}>
             <h2 className='text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl bg-clip-text text-transparent bg-gradient-to-tr from-primary'>
               Contact me
             </h2>
-
+            </motion.div>
             <div className='mx-auto w-full max-w-[700px]'>
               <Form {...form}>
                 <form

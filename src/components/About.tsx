@@ -1,4 +1,7 @@
 'use client'
+// 'use client'
+import React, { useState, useEffect } from 'react';
+import { motion } from 'framer-motion';
 import { Badge } from '@/components/ui/badge'
 import { FileJson, Hexagon } from 'lucide-react'
 import { FaReact } from "react-icons/fa";
@@ -9,29 +12,47 @@ import { FaBootstrap } from "react-icons/fa6";
 import { SiSass } from "react-icons/si";
 import { SiRedux } from "react-icons/si";
 import { FaGitAlt } from "react-icons/fa";
-import { motion } from 'framer-motion';
+
 const About = () => {
+  // Marking the component as a Client Component
+  // useClient();
+
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const section = document.getElementById('scrolled-down-section3');
+      if (section) {
+        const { top } = section.getBoundingClientRect();
+        const isVisible = top >= 0 && top <= window.innerHeight;
+        setIsVisible(isVisible);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
   return (
-    <section className='w-full py-6 md:py-12 lg:py-20 border-t'>
+    <section id='scrolled-down-section3' className='w-full py-6 md:py-12 lg:py-20 border-t'>
       <div className='container grid items-center gap-4 px-4 md:px-4'>
         <div className='space-y-4'>
           <div className='inline-block rounded-lg bg-primary px-3 py-1 text-sm text-white'>
             About me
           </div>
           <div className='space-y-2'>
-          <motion.div initial="hidden" animate="visible"variants={{
-     hidden: {
-    scale: .8,
-    opacity: 0
-  },
-  visible: {
-    scale: 1,
-    opacity: 1,
-    transition: {
-      delay: .1
-    }
-  },
-}}>
+          <motion.div initial="hidden" animate={isVisible ? "visible" : "hidden"} variants={{
+              hidden: {
+                scale: .8,
+                opacity: 0
+              },
+              visible: {
+                scale: 1,
+                opacity: 1,
+                transition: {
+                  delay: .2
+                }
+              },
+            }}>
             <h2 className='text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl bg-clip-text text-transparent bg-gradient-to-tr from-primary'>
               My skills
             </h2>

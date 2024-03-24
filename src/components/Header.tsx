@@ -4,10 +4,26 @@ import { Linkedin, Github, Instagram } from 'lucide-react'
 import {Button} from '@/components/ui/button'
 import Link from 'next/link'
 import { motion } from 'framer-motion';
+import React, { useState, useEffect } from 'react';
 const Header = () => {
+    const [isVisible, setIsVisible] = useState(false);
+  
+    useEffect(() => {
+      const handleScroll = () => {
+        const section = document.getElementById('scrolled-down-section4');
+        if (section) {
+          const { top } = section.getBoundingClientRect();
+          const isVisible = top >= 0 && top <= window.innerHeight;
+          setIsVisible(isVisible);
+        }
+      };
+  
+      window.addEventListener('scroll', handleScroll);
+      return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
   return (
     
-    <header className="flex justify-between py-5 mx-5 sm:px-8 xl:px-16">
+    <header id="scrolled-down-section4"  className="flex justify-between py-5 mx-5 sm:px-8 xl:px-16">
         <div> 
             <Link className='mr-auto' href='/#'>
             <motion.div initial="hidden" animate="visible"variants={{
@@ -19,7 +35,7 @@ const Header = () => {
     scale: 1,
     opacity: 1,
     transition: {
-      delay: .1
+      delay: .2
     }
   },
 }}>

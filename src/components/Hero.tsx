@@ -1,10 +1,27 @@
 'use client'
 import { Button } from './ui/button'
+import React, { useState, useEffect } from 'react';
+
 import Link from 'next/link'
 import { motion } from 'framer-motion';
 const Hero = () => {
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const section = document.getElementById('scrolled-down-section5');
+      if (section) {
+        const { top } = section.getBoundingClientRect();
+        const isVisible = top >= 0 && top <= window.innerHeight;
+        setIsVisible(isVisible);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
   return (
-    <section className='w-full py-6 flex items-center justify-center md:py-12 lg:py-20 xl:py-24'>
+    <section id='scrolled-down-section5' className='w-full py-6 flex items-center justify-center md:py-12 lg:py-20 xl:py-24'>
       <div className='container grid items-center gap-5 px-4 md:px-6'>
         <div className='space-y-4'>
           <div className='inline-block rounded-lg bg-primary px-3 py-1 text-sm text-white'>
