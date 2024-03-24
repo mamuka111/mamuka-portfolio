@@ -22,7 +22,7 @@ const Experience = () => {
                 locationCountry='Georgia'
               >
                 <p className='text-muted-foreground'>
-                I've undertaken freelance projects on Upwork, refining my web development skills through diverse collaborations.
+                I've Undertaken freelance projects on Upwork, refining my web development skills through diverse collaborations.
                  Prioritizing quality and meeting deadlines, I've garnered valuable experience in client communication and project management, enriching both my technical proficiency and remote work capabilities.
                 </p>
               </CardComponent>
