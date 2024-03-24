@@ -46,6 +46,7 @@ const Contact = () => {
     })
   }
 
+
   return (
     <section id='contact' className='w-full py-6 md:py-12 lg:py-20 border-t'>
       <div className='container grid items-center gap-4 px-4 md:px-4'>

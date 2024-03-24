@@ -1,3 +1,4 @@
+'use client'
 import { Badge } from '@/components/ui/badge'
 import { FileJson, Hexagon } from 'lucide-react'
 import { FaReact } from "react-icons/fa";
@@ -8,7 +9,7 @@ import { FaBootstrap } from "react-icons/fa6";
 import { SiSass } from "react-icons/si";
 import { SiRedux } from "react-icons/si";
 import { FaGitAlt } from "react-icons/fa";
-
+import { motion } from 'framer-motion';
 const About = () => {
   return (
     <section className='w-full py-6 md:py-12 lg:py-20 border-t'>
@@ -18,9 +19,23 @@ const About = () => {
             About me
           </div>
           <div className='space-y-2'>
+          <motion.div initial="hidden" animate="visible"variants={{
+     hidden: {
+    scale: .8,
+    opacity: 0
+  },
+  visible: {
+    scale: 1,
+    opacity: 1,
+    transition: {
+      delay: .1
+    }
+  },
+}}>
             <h2 className='text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl bg-clip-text text-transparent bg-gradient-to-tr from-primary'>
               My skills
             </h2>
+            </motion.div>
             <p className='max-w-[600px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400'>
 Proficient in front-end development, I specialize in crafting dynamic interfaces using JavaScript and TypeScript,
  with expertise in React.js and Next.js. I prioritize functionality and aesthetics, leveraging Bootstrap, Sass, and Redux for scalability and efficient state management.
