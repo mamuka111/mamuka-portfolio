@@ -19,21 +19,21 @@ const Footer = () => {
       <nav>
         <menu className='flex gap-2 '>
           <li>
-            <Link href='https://github.com/charlses' target='_blank'>
+            <Link href='https://github.com/mamuka111' target='_blank'>
               <Button variant='outline' size='icon'>
                 <Github className='h-5 w-5 font-light text-primary' />
               </Button>
             </Link>
           </li>
           <li>
-            <Link href='https://linkedin.com/in/davit-tavadze' target='_blank'>
+            <Link href='https://www.linkedin.com/in/mamuka-avsajanishvili-47ab6b269/' target='_blank'>
               <Button variant='outline' size='icon'>
                 <Linkedin className='h-5 w-5 font-light text-primary' />
               </Button>
             </Link>
           </li>
           <li>
-            <Link href='https://instagram.com/barafrends' target='_blank'>
+            <Link href='https://www.instagram.com/mamuka_avsajanishvili/' target='_blank'>
               <Button variant='outline' size='icon'>
                 <Instagram className='h-5 w-5 font-light text-primary' />
               </Button>
