@@ -7,12 +7,12 @@ const Footer = () => {
   return (
     <footer className='mx-5 flex flex-col justify-between border-t py-5 items-center md:flex-row '>
       <p className='text-sm text-muted-foreground flex'>
-        &copy; {new Date().getFullYear()}, Davit Tavadze Portfolio
+        &copy; {new Date().getFullYear()}, Mamuka Avsajanishvili Portfolio
         <Link
           href='https://charlses.com/'
           className='flex items-center text-muted-foreground hover:text-foreground ml-2'
         >
-          Charlses
+        
         </Link>
       </p>
 
