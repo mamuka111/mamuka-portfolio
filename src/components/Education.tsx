@@ -22,9 +22,9 @@ const Education = () => {
                 locationCountry='Georgia'
               >
                 <p className='text-muted-foreground'>
-                Engaged in my frontend web development studies at the Digital Institute, I'm delving into the realms of React, TypeScript, and JavaScript. This curriculum equips me with the prowess to construct dynamic and adaptable user interfaces. 
-                Through these courses, I'm honing my craft in developing contemporary web applications that seamlessly blend functionality with visual appeal.
-                 Exploring an array of essential tools and methodologies, I'm cultivating expertise in building scalable and easily maintainable projects.
+                Engaged in my frontend web development studies at the Digital Institute, I&apos;m delving into the realms of React, TypeScript, and JavaScript. This curriculum equips me with the prowess to construct dynamic and adaptable user interfaces. 
+                Through these courses, I&apos;m honing my craft in developing contemporary web applications that seamlessly blend functionality with visual appeal.
+                 Exploring an array of essential tools and methodologies, I&apos;m cultivating expertise in building scalable and easily maintainable projects.
                 </p>
               </CardComponent>
               <CardComponent
@@ -47,8 +47,8 @@ const Education = () => {
                 dateTo='current'
               >
                 <p className='text-gray-700 dark:text-gray-400'>
-                Through Udemy, I've delved deep into JavaScript, TypeScript, and React. These courses have equipped me with an in-depth understanding of these technologies.
-                 I've mastered JavaScript's core concepts, including its inner workings, allowing me to comprehend how it operates behind the scenes. With TypeScript, I've developed type-safe applications, and with React, I've built robust web applications.
+                Through Udemy, I&apos;ve delved deep into JavaScript, TypeScript, and React. These courses have equipped me with an in-depth understanding of these technologies.
+                 I&apos;ve mastered JavaScript&apos;s core concepts, including its inner workings, allowing me to comprehend how it operates behind the scenes. With TypeScript, I&apos;ve developed type-safe applications, and with React, I&apos;ve built robust web applications.
                  These learning experiences have greatly enhanced my skills in frontend development.
                 </p>
               </CardComponent>
